@@ -26,21 +26,75 @@
   --font-1: 1.75rem;
   --font-2: 1rem;
   --font-3: 0.875rem;
+  --font-4: 0.75rem;
 
   --radius-1: 0.25rem;
   --container: 45rem;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-style: normal;
+  line-height: 150%;
   -webkit-font-smoothing: antialiased;
   background-color: var(--color-grey-9);
+}
+
+h1  {
+  font-size: var(--font-1);
+  font-weight: 600;
+}
+h2  {
+  font-size: var(--font-2);
+  font-weight: 600;
+}
+h3  {
+  font-size: var(--font-3);
+  font-weight: 500;
+}
+h4  {
+  font-size: var(--font-4);
+  font-weight: 500;
 }
 
 .container {
   width: var(--container);
   max-width: 100%;
   padding: 0 1rem;
-  margin: 0 auto;
+  margin: 5rem auto;
+}
+
+.theme  {
+  background-color: var(--color-grey-8);
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+}
+
+.button--light  {
+  width: max-content;
+
+  background-color: var(--color-grey-7);
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 5px;
+
+  transition: 0.2s ease-in-out;
+}
+.button--light:hover  {
+  color: var(--color-grey-8);
+  background-color: var(--color-grey-1);
+}
+
+
+@media (max-width: 700px) {
+  .container  {
+    padding: 0 0.25rem;
+  }
 }

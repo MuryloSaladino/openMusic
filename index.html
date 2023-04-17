@@ -6,12 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/styles/globalStyles.css" />
     <link rel="stylesheet" href="./src/styles/index.css" />
+    <script type="module" src="./src/scripts/index.js"></script>
     <title>Open Music</title>
   </head>
   <body>
-    <main></main>
-    <script src="./src/scripts/theme.js"></script>
-    <script src="./src/scripts/productsData.js"></script>
-    <script src="./src/scripts/index.js"></script>
+    <header class="container">
+      <h1>open music</h1>
+      <button class="theme"><img src="./src/assets/img/icons/moon.svg" alt=""></button>
+    </header>
+    
+    <main>
+      <section id="filters" class="container">
+        <h2>Gênero Musical</h2>
+        <div class="filters__div">
+          <button class="button--light">Todos</button>
+          <button class="button--light">Pop</button>
+          <button class="button--light">MPB</button>
+          <button class="button--light">Forró</button>
+          <button class="button--light">Samba</button>
+          <button class="button--light">Baião</button>
+          <button class="button--light">Rap</button>
+          <button class="button--light">Hip-Hop</button>
+          <button class="button--light">Rock</button>
+          <button class="button--light">Reggae</button>
+          <button class="button--light">Country</button>
+          <button class="button--light">Gospel</button>
+        </div>
+
+        <h2>Definir preço</h2>
+        <div class="filters__div">
+          <h2 id="filters__price">Até R$</h2>
+          <input id="filters__price-range" min="10" max="100" value="64" type="range">
+        </div>
+      </section>
+
+      <section class="container">
+        <h2>Álbuns Encontrados</h2>
+        <div id="results">
+
+          <div class="album">
+            <img class="album__img" src="./src/assets/img/1.jpg" alt="">
+            <div class="album__info">
+              <h4>Scalene - 2017</h4>
+              <h2>Magnetite</h2>
+              <h3>R$70,00</h3>
+            </div>
+            <button class="button--light">Comprar</button>
+          </div>
+
+          <div class="album">
+            <img class="album__img" src="./src/assets/img/1.jpg" alt="">
+            <div class="album__info">
+              <h4>Scalene - 2017</h4>
+              <h2>Magnetite</h2>
+              <h3>R$70,00</h3>
+            </div>
+            <button class="button--light">Comprar</button>
+          </div>
+
+        </div>
+      </section>
+    </main>
   </body>
 </html>
