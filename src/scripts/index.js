@@ -19,8 +19,8 @@ function createEvents() {
     buttonsContainer.forEach(element => element.addEventListener('click', () => renderAlbums()))
 }
 
+renderPriceComponents()
 renderFilters()
 renderAlbums()
-renderPriceComponents()
 addTheme()
 createEvents()

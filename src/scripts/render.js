@@ -26,7 +26,7 @@ export function renderFilters()  {
         })
     })
 
-    buttonsContainer[localStorage.getItem('filter')].click();
+    localStorage.getItem('filter') ? buttonsContainer[localStorage.getItem('filter')].click() : buttonsContainer[0].click();
 }
 
 function filterProducts(arr) {
@@ -36,8 +36,7 @@ function filterProducts(arr) {
 
     let priceFilter = parseInt(inputPrice.value);
     let categoryFilter = parseInt(buttonsContainer.find(element => element.classList.contains('button--selected')).id);
-
-
+    
     if(categoryFilter === 0) {
         return arr.filter(element => element.price < priceFilter/10) 
     } else {
