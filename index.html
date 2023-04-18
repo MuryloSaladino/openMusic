@@ -12,58 +12,29 @@
   <body>
     <header class="container">
       <h1>open music</h1>
-      <button class="theme"><img src="./src/assets/img/icons/moon.svg" alt=""></button>
+      <button class="theme">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class='theme__icon' d="M8.84375 16C11.3125 16 13.5625 14.9062 15.0625 13.0625C15.2812 12.7812 15.0312 12.375 14.6875 12.4375C10.8125 13.1875 7.25 10.2188 7.25 6.28125C7.25 4.03125 8.4375 1.96875 10.4062 0.84375C10.7188 0.65625 10.625 0.21875 10.2812 0.15625C9.8125 0.0625 9.34375 0.03125 8.84375 0C4.40625 0 0.84375 3.59375 0.84375 8C0.84375 12.4375 4.40625 16 8.84375 16Z" fill="#2B2F33"/>
+        </svg>
+      </button>
     </header>
     
     <main>
       <section id="filters" class="container">
         <h2>Gênero Musical</h2>
-        <div class="filters__div">
-          <button class="button--light">Todos</button>
-          <button class="button--light">Pop</button>
-          <button class="button--light">MPB</button>
-          <button class="button--light">Forró</button>
-          <button class="button--light">Samba</button>
-          <button class="button--light">Baião</button>
-          <button class="button--light">Rap</button>
-          <button class="button--light">Hip-Hop</button>
-          <button class="button--light">Rock</button>
-          <button class="button--light">Reggae</button>
-          <button class="button--light">Country</button>
-          <button class="button--light">Gospel</button>
+        <div id="buttons" class="filters__div">
         </div>
 
         <h2>Definir preço</h2>
         <div class="filters__div">
-          <h2 id="filters__price">Até R$</h2>
-          <input id="filters__price-range" min="10" max="100" value="64" type="range">
+          <h2 id="filters__price">Até R$ 60,00</h2>
+          <input id="filters__price-range" min="0" max="1000" value="600" type="range">
         </div>
       </section>
 
       <section class="container">
         <h2>Álbuns Encontrados</h2>
         <div id="results">
-
-          <div class="album">
-            <img class="album__img" src="./src/assets/img/1.jpg" alt="">
-            <div class="album__info">
-              <h4>Scalene - 2017</h4>
-              <h2>Magnetite</h2>
-              <h3>R$70,00</h3>
-            </div>
-            <button class="button--light">Comprar</button>
-          </div>
-
-          <div class="album">
-            <img class="album__img" src="./src/assets/img/1.jpg" alt="">
-            <div class="album__info">
-              <h4>Scalene - 2017</h4>
-              <h2>Magnetite</h2>
-              <h3>R$70,00</h3>
-            </div>
-            <button class="button--light">Comprar</button>
-          </div>
-
         </div>
       </section>
     </main>

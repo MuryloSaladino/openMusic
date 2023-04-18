@@ -39,6 +39,8 @@ header  {
     background-image: linear-gradient(var(--color-brand-1), var(--color-brand-1));
     background-size: 60% 100%;
     background-repeat: no-repeat;
+
+    transition: 0s;
 }
 #filters__price-range::-webkit-slider-thumb   {
     -webkit-appearance: none;
@@ -57,6 +59,7 @@ header  {
 
 #results    {
     margin-top: 3rem;
+    margin-bottom: 20rem;
 
     display: flex;
     flex-flow: row wrap;
@@ -77,9 +80,19 @@ header  {
     position: relative;
 
     overflow: hidden;
+
+    animation: showAlbum 0.3s ease
 }
 .album:hover .album__img    {
     width: 115%;
+}
+
+.album__container {
+    width: 20rem;
+    height: 235.95px;
+
+    display: flex;
+    justify-content: center;
 }
 
 .album__img {
@@ -89,7 +102,6 @@ header  {
     border-radius: 5px 5px 0 0;
 
     object-fit: cover;
-    transition: 0.2s;
     align-self: center;
 }
 
