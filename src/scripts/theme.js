@@ -1,3 +1,5 @@
+import { renderAlbums, renderFilters } from "./render.js"
+
 export function addTheme()  {
     const themeButton = document.querySelector('.theme')
 
@@ -16,4 +18,23 @@ export function addTheme()  {
                 </svg>
            `
     }
+}
+
+export function themeButtonEvent()  {
+    const themeButton = document.querySelector('.theme')
+
+    themeButton.addEventListener('click', () => {
+        if(localStorage.getItem('darkMode')) {
+           localStorage.removeItem('darkMode') 
+        } else {
+           localStorage.setItem('darkMode', true) 
+        } 
+
+        addTheme()
+        renderFilters()
+
+        let buttonsContainer = Array.from(document.querySelectorAll('.button'))
+        buttonsContainer.push(document.querySelector('.button--selected'))
+        buttonsContainer.forEach(element => element.addEventListener('click', () => renderAlbums()))
+    })
 }

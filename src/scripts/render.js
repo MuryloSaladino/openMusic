@@ -65,6 +65,7 @@ export function renderAlbums()   {
         </div>
         `)
     });
+    console.log('aqui')
 }
 
 export function renderPriceComponents() {
